@@ -18,7 +18,7 @@ public class HelloControllerTest {
     @Autowired // 스프링이 관리하는 Bean을 받는다
     private MockMvc mvc; // 웹api 테스트시 사용, HTTP GET, POST등에 대한 API테스트 가능해짐
 
-    @Test
+    @Test // @Test 붙임으로서 해당 함수를 테스트 코드로 만들어 줌
     public void hello가_리턴된다() throws Exception {
         String hello = "hello";
 
