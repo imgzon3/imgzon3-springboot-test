@@ -20,7 +20,7 @@ public class HelloControllerTest {
 
     @Test // @Test 붙임으로서 해당 함수를 테스트 코드로 만들어 줌
     public void hello가_리턴된다() throws Exception {
-        String hello = "hello";
+        String hello = "hello"; // return될 hello 확인하기
 
         mvc.perform(get("/hello")) // MockMvc 통해 /hello로 HTTP GET 요청 함
                 .andExpect(status().isOk()) // HTTP Header의 STatus 검증, 여기선 200이 아닌지 확인
