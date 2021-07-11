@@ -1,3 +1,4 @@
+//gradle 4.10.2에 맞추어 짐, 추후에 새로운 버전의 gradle에서 방법 검색해 보기
 package com.imgzon3.test.springboot.web.dto;
 
 import lombok.Getter;
