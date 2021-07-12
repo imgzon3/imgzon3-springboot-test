@@ -1,3 +1,4 @@
+//해당 코드는 gradle 4.10.2 버전 기준으로 작성된 것
 package com.imgzon3.test.springboot.web.dto;
 
 import org.junit.Test;
