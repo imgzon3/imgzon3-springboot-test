@@ -36,7 +36,7 @@ public class HelloControllerTest {
                 .param("name", name) // 요청 파라미터 설정하는 함수, String만 가능
                 .param("amount", String.valueOf(amount)))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("&.name", is(name))) // JSON 응답값을 검증하는 메소드, $기준으로 필드명 명시
+                .andExpect(jsonPath("$.name", is(name))) // JSON 응답값을 검증하는 메소드, $기준으로 필드명 명시
                 .andExpect(jsonPath("$.amount", is(amount)));
     }
 }
