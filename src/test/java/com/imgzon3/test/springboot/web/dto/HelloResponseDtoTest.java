@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class HelloResponseDtoTest {
 
-    @Test
+    @Test// 테스트 코드로 만들어줌
     public void 롬복_기능_테스트() {
         //given
         String name = "test";
