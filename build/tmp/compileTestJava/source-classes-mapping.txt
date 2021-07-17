@@ -1,2 +1,0 @@
-com/imgzon3/test/springboot/web/HelloControllerTest.java
- com.imgzon3.test.springboot.web.HelloControllerTest

@@ -1,2 +1,0 @@
-com/imgzon3/test/springboot/Application.java
- com.imgzon3.test.springboot.Application
