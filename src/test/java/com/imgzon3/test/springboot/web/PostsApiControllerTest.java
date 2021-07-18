@@ -4,9 +4,9 @@ import com.imgzon3.test.springboot.domain.posts.Posts;
 import com.imgzon3.test.springboot.domain.posts.PostsRepository;
 import com.imgzon3.test.springboot.web.dto.PostsSaveRequestDto;
 import com.imgzon3.test.springboot.web.dto.PostsUpdateRequestDto;
-import org.junit.After;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
@@ -14,13 +14,13 @@ import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.List;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)// JPA를 사용하야 하므로 WebMvcTest는 X
 public class PostsApiControllerTest {
 
@@ -33,7 +33,7 @@ public class PostsApiControllerTest {
     @Autowired
     private PostsRepository postsRepository;
 
-    @After
+    @AfterEach
     public void tearDown() throws Exception {
         postsRepository.deleteAll();
     }

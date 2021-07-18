@@ -1,17 +1,17 @@
 package com.imgzon3.test.springboot.web;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.Matchers.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-@RunWith(SpringRunner.class) // JUnit과 스프링부트 테스트 사이의 연결자, SpringRunner 실행자를 사용하게 함
+@ExtendWith(SpringExtension.class) // JUnit과 스프링부트 테스트 사이의 연결자, SpringRunner 실행자를 사용하게 함
 @WebMvcTest(controllers = HelloController.class) // 스프링테스트중, 웹에 집중하는 어노테이션
 public class HelloControllerTest {
 
