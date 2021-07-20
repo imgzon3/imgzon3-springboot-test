@@ -9,8 +9,8 @@ public class IndexController {
 
     @GetMapping("/")
     public String index() {
-        return "index";// to index.mustache
-    }
+        return "index";
+    }// to index.mustache
 
     @GetMapping("/posts/save")
     public String postsSave() {
