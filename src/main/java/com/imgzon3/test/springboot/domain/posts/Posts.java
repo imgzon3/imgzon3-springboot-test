@@ -1,5 +1,6 @@
 package com.imgzon3.test.springboot.domain.posts;
 
+import com.imgzon3.test.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor//기본 생성자 자동 생성
 @Entity//테이블과 링크될 리스트임을 나타냄
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
